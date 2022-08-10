@@ -1,267 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/flag_height"
-        android:orientation="vertical">
+    <Button
+        android:id="@+id/goFlags"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:onClick="getFlags"
+        android:text="Flags"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/goImage"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:id="@+id/aus_flag"
-            android:layout_width="@dimen/flag_width"
-            android:layout_height="@dimen/flag_height"
-            android:layout_margin="@dimen/flag_margin"
-            android:orientation="vertical">
-
-            <View
-                android:id="@+id/aus_upper"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#C8102E" />
-
-            <View
-                android:id="@+id/aus_middle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/white" />
-
-            <View
-                android:id="@+id/aus_lower"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#C8102E" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/pol_flag"
-            android:layout_width="@dimen/flag_width"
-            android:layout_height="@dimen/flag_height"
-            android:layout_margin="@dimen/flag_margin"
-            android:orientation="vertical">
-
-            <View
-                android:id="@+id/pol_upper"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/white" />
-
-            <View
-                android:id="@+id/pol_lower"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#DC143C" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ita_flag"
-            android:layout_width="@dimen/flag_width"
-            android:layout_height="@dimen/flag_height"
-            android:layout_margin="@dimen/flag_margin"
-            android:orientation="horizontal">
-
-            <View
-                android:id="@+id/ita_left"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#009246" />
-
-            <View
-                android:id="@+id/ita_middle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/white" />
-
-            <View
-                android:id="@+id/ita_right"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#ce2b37" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/col_flag"
-            android:layout_width="@dimen/flag_width"
-            android:layout_height="@dimen/flag_height"
-            android:layout_margin="@dimen/flag_margin"
-            android:orientation="vertical"
-            android:weightSum="4">
-
-            <View
-                android:id="@+id/col_upper"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:background="#FCD116" />
-
-            <View
-                android:id="@+id/col_middle"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="#003893" />
-
-            <View
-                android:id="@+id/col_lower"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="#CE1126" />
-        </LinearLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/mdg_flag"
-            android:layout_width="@dimen/flag_width"
-            android:layout_height="@dimen/flag_height"
-            android:layout_margin="@dimen/flag_margin">
-
-            <View
-                android:id="@+id/mdg_left"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:background="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@+id/mdg_bottom"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <View
-                android:id="@+id/mdg_top"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:background="#F9423A"
-                app:layout_constraintBottom_toTopOf="@id/mdg_bottom"
-                app:layout_constraintHorizontal_weight="2"
-                app:layout_constraintLeft_toRightOf="@id/mdg_left"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <View
-                android:id="@+id/mdg_bottom"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:background="#00843D"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_weight="2"
-                app:layout_constraintLeft_toRightOf="@id/mdg_left"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/mdg_top" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        <LinearLayout
-            android:id="@+id/tha_flag"
-            android:layout_width="@dimen/flag_width"
-            android:layout_height="@dimen/flag_height"
-            android:orientation="vertical"
-            android:layout_margin="@dimen/flag_margin"
-            android:weightSum="6">
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="#EF3340" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="@color/white" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:background="#00205B" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="@color/white" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="#EF3340" />
-        </LinearLayout>
-        
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/den_flag"
-            android:layout_width="@dimen/den_flag_width"
-            android:layout_height="@dimen/flag_height"
-            android:layout_margin="@dimen/flag_margin"
-            android:background="#DA291C">
-
-            <View
-                android:id="@+id/den_vertical_stripe"
-                android:layout_width="@dimen/den_stripe_width"
-                android:layout_height="match_parent"
-                android:background="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.378"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <View
-                android:id="@+id/den_horizontal_stripe"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/den_stripe_width"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:background="@color/white"
-                />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/swi_flag"
-            android:layout_width="@dimen/flag_width"
-            android:layout_height="@dimen/flag_width"
-            android:layout_margin="@dimen/flag_margin"
-            android:background="#DA291C">
-
-            <View
-                android:id="@+id/swi_vertical_stripe"
-                android:layout_width="@dimen/swi_stripe_width"
-                android:layout_height="@dimen/swi_stripe_length"
-                android:background="@color/white"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                />
-
-            <View
-                android:id="@+id/swi_horizontal_stripe"
-                android:layout_width="@dimen/swi_stripe_length"
-                android:layout_height="@dimen/swi_stripe_width"
-                android:background="@color/white"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    </LinearLayout>
-
-</ScrollView>
+    <Button
+        android:id="@+id/goImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:onClick="getImage"
+        android:text="Image"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toRightOf="@id/goFlags"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
