@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="flag_width">300dp</dimen>
+    <dimen name="den_flag_width">264dp</dimen>
+    <dimen name="den_stripe_width">28dp</dimen>
+    <dimen name="flag_height">200dp</dimen>
+    <dimen name="flag_margin">5dp</dimen>
+    <dimen name="swi_stripe_width">56.25dp</dimen>
+    <dimen name="swi_stripe_length">187.5</dimen>
+</resources>
