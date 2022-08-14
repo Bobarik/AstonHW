@@ -1,4 +1,4 @@
-package com.gmail.vlaskorobogatov.astonhw3
+package com.gmail.vlaskorobogatov.astonhw
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

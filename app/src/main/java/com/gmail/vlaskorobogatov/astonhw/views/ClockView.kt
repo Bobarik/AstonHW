@@ -1,4 +1,4 @@
-package com.gmail.vlaskorobogatov.astonhw3.views
+package com.gmail.vlaskorobogatov.astonhw.views
 
 import android.content.Context
 import android.graphics.Canvas
@@ -7,7 +7,7 @@ import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
 import androidx.core.content.withStyledAttributes
-import com.gmail.vlaskorobogatov.astonhw3.R
+import com.gmail.vlaskorobogatov.astonhw.R
 import java.util.Calendar
 import kotlin.math.PI
 import kotlin.math.cos
