@@ -20,4 +20,9 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, ImgActivity::class.java).apply {}
         startActivity(intent)
     }
+
+    fun getClock(view: View) {
+        val intent = Intent(this, ClockActivity::class.java).apply {}
+        startActivity(intent)
+    }
 }
