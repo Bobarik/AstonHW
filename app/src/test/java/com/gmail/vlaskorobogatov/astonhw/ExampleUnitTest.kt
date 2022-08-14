@@ -1,4 +1,4 @@
-package com.gmail.vlaskorobogatov.astonhw3
+package com.gmail.vlaskorobogatov.astonhw
 
 import org.junit.Test
 

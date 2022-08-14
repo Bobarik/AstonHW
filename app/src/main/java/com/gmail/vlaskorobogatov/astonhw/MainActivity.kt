@@ -1,4 +1,4 @@
-package com.gmail.vlaskorobogatov.astonhw3
+package com.gmail.vlaskorobogatov.astonhw
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -18,6 +18,11 @@ class MainActivity : AppCompatActivity() {
 
     fun getImage(view: View) {
         val intent = Intent(this, ImgActivity::class.java).apply {}
+        startActivity(intent)
+    }
+
+    fun getClock(view: View) {
+        val intent = Intent(this, ClockActivity::class.java).apply {}
         startActivity(intent)
     }
 }
