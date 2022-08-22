@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">Aston HW 3</string>
+    <string name="app_name">Aston HW</string>
     <string name="toast_error">Image not found on this link</string>
     <string name="img_edit_hint">Write the URL of your image here</string>
+    <string name="contact_name">%s %s</string>
 </resources>

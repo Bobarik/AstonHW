@@ -8,6 +8,7 @@ import android.view.View
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
     }
 
@@ -23,6 +24,11 @@ class MainActivity : AppCompatActivity() {
 
     fun getClock(view: View) {
         val intent = Intent(this, ClockActivity::class.java).apply {}
+        startActivity(intent)
+    }
+
+    fun getContacts(view: View) {
+        val intent = Intent(this, ContactsActivity::class.java).apply {}
         startActivity(intent)
     }
 }
